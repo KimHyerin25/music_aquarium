@@ -1,4 +1,7 @@
 # Cyclegan_Dataset_for music note to fish
+### Description
+According to each category (goldfish, jellyfish), it consists of testA, testB, trainA, and trainB folders. The ratio of train : test is 8 : 2
+
 
 ### Download link
 | Category     | Total        | Link                                                                                  | Release Date |
