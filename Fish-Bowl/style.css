@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+
+.fishbowl {
+    width: 100%;
+    aspect-ratio: 1 / 0.61;
+    position: relative;
+}
+
+#bowl-bg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.fish {
+    width: 15%;
+    position: absolute;
+    animation: animateShark 6s linear infinite;
+}
+
+
+@keyframes animateShark {
+    0% {
+        transform: translate(0,0) rotateY(180deg);
+    }
+    50% {
+        transform: translate(180px,0) rotateY(180deg);
+    }
+    51% {
+        transform: translate(180px,0) rotateY(0deg);
+    }
+    100% {
+        transform: translate(0,0) rotateY(0deg);
+    }
+}
+
+@keyframes animateWater {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animateBowl {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(-15deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}

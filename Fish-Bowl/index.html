@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Fish Bowl</title>
+</head>
+
+<body>
+    <div class="fishbowl" id="fishbowl">
+        <img id="bowl-bg" src="./bowl.png" alt="bowl">
+    </div>
+
+    <script>
+        function getRandomInt(min, max) {
+            min = Math.ceil(min) 
+            max = Math.floor(max)
+            return Math.floor(Math.random() * (max - min)) + min
+        }
+        var container = document.getElementById('fishbowl')
+
+        for(var i = 0; i < 10; i ++) {
+            var img = document.createElement('img')
+            img.src = `./fish_${i}.png`
+            img.className = "fish"
+            img.style.top = `${getRandomInt(20, 75)}%`
+            img.style.left = `${getRandomInt(25, 75)}%`
+            container.appendChild(img)
+        }
+    </script>
+</body>
+
+</html>

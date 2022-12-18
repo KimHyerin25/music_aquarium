@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Fish Bowl</title>
+</head>
+
+<body>
+    <h1>
+        <a>MUSIC AQUARIUM</a>
+    </h1>
+    <div class="fishbowl" id="fishbowl">
+        <img id="bowl-bg" src="./major_3_background.png" alt="bowl">
+    </div>
+    <audio autoplay controls>
+        <source src="audio/Chopin_Etude_no1.mp3" allow="autoplay" type="audio/mp3">
+    </audio>
+    <script>
+        function getRandomInt(min, max) {
+            min = Math.ceil(min) 
+            max = Math.floor(max)
+            return Math.floor(Math.random() * (max - min)) + min
+        }
+        var container = document.getElementById('fishbowl')
+
+        for(var i = 0; i < 8; i ++) {
+            var img = document.createElement('img')
+            img.src = `./goldfish_${i}.png`
+            img.className = "fish"
+            img.style.top = `${getRandomInt(47, 86)}%`
+            img.style.left = `${getRandomInt(27, 46)}%`
+            container.appendChild(img)
+        }
+    </script>
+</body>
+
+</html>
